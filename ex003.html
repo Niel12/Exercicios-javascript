@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO</title>
+    <link href="ex001.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+   <p> Você pegou a espada magica do guerreiro?</p>
+    <form action="">
+      <input type="radio" name="r1" value="1"> Sim<br> 
+      <input type="radio" name="r1" value="0"> Não<br>
+    </form>
+
+    <p>-Você concertou os reatores da fase 2?</p>
+    <form action="">
+      <input type="radio" name="r2" value="1"> Sim<br>
+      <input type="radio" name="r2" value="0"> Não<br>
+    </form>
+
+    <p>-Você lembrou de trocar o oleo do GG?</p>
+    <form action="">
+      <input type="radio" name="r3" value="1"> Sim<br>
+      <input type="radio" name="r3" value="0"> Não<br>
+    </form>
+
+    <p>-Você pegou o cálice encantado?</p>
+    <form action="">
+      <input type="radio" name="r4" value="1"> Sim<br>
+      <input type="radio" name="r4" value="0"> Não<br>
+    </form>
+
+    <p>-Você pegou mapa da pegra?</p>
+    <form action="">
+      <input type="radio" name="r5" value="1"> Sim<br>
+      <input type="radio" name="r5" value="0"> Não<br>
+    </form>
+
+    <input type="button" value="Enviar" onclick="enviar()">
+
+    <div id="res">Resultado vem aqui..</div>
+    
+    <script> 
+      var jogador = window.prompt('Qual seu nome invocador?');
+      function enviar(){
+        var res1 = document.querySelector('input[name="r1"]:checked').value; //comando para pegar dados inseridos no radio.
+        var res2 = document.querySelector('input[name="r2"]:checked').value;
+        var res3 = document.querySelector('input[name="r3"]:checked').value;
+        var res4 = document.querySelector('input[name="r4"]:checked').value;
+        var res5 = document.querySelector('input[name="r5"]:checked').value;
+        var a1 = Number(res1); // converter dados do radio para number
+        var a2 = Number(res2);
+        var a3 = Number(res3);
+        var a4 = Number(res4);
+        var a5 = Number(res5);
+
+        var soma = a1 + a2 + a3 + a4 + a5;
+
+        switch(soma){
+          case 0:
+          res.innerHTML = `${jogador} você fez ${soma} pontos Falhou MizeravelmenteD `
+          break;
+          case 1:
+          res.innerHTML = `${jogador} você fez ${soma} pontos Sim Falha, mas consegue fugir da situação `
+          break;
+          case 2:
+          res.innerHTML = `${jogador} você fez ${soma} pontos Sim Falha, mas consegue fugir da situação `
+          break;
+          case 3:
+          res.innerHTML = `${jogador} você fez ${soma} pontos Você chega perto de alcançar seus objetivos, mas acaba falhando um pouco `
+          break;
+          case 4:
+          res.innerHTML = `${jogador} você fez ${soma} pontos Depois de muito esforço, conquistou porem não perfeitamente`
+          break;
+          case 5:
+          res.innerHTML = `${jogador} você fez ${soma} pontos Você é foda Perfectttt `
+          break;
+        }
+
+      }
+    </script>
+</body>
+</html>
