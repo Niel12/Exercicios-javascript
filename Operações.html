@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outro</title>
+    <link href="ex001.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+
+    <h1>4 Operações</h1>
+    <div>Valor1</div>
+    <input type="number" name="valora" id="v1"> 
+    <div>Valor2</div>
+    <input type="number" name="valorb" id="v2">
+    <button onclick="soma()">Somar</button>
+    <button onclick="dividir()">Dividir</button>
+    <button onclick="multiplica()">Multiplicar</button>
+    <button onclick="subtrai()">Subtrair</button>
+
+    <section id="res">
+      <p>Resultado..</p>
+    </section>
+
+   <script>
+       function soma(){
+        var a = window.document.getElementById('v1');
+        var b = window.document.querySelector('input#v2');
+        var v1 = Number(a.value);
+        var v2 = Number(b.value);
+
+        resultado = v1 + v2;
+        res.innerHTML = `Á soma de ${v1} + ${v2} = ${resultado}`
+       }
+
+       function dividir(){
+        var a = window.document.getElementById('v1');
+        var b = window.document.querySelector('input#v2');
+        var v1 = Number(a.value);
+        var v2 = Number(b.value);
+
+        resultado = v1 / v2;
+        res.innerHTML = `Á divisão de ${v1} / ${v2} = ${resultado}`
+       }
+
+       function multiplica(){
+        var a = window.document.getElementById('v1');
+        var b = window.document.querySelector('input#v2');
+        var v1 = Number(a.value);
+        var v2 = Number(b.value);
+
+        resultado = v1 * v2;
+        res.innerHTML = `Á multiplicação de ${v1} * ${v2} = ${resultado}`
+        }
+
+        function subtrai(){
+        var a = window.document.getElementById('v1');
+        var b = window.document.querySelector('input#v2');
+        var v1 = Number(a.value);
+        var v2 = Number(b.value);
+
+        resultado = v1 - v2;
+        res.innerHTML = `Á subtração de ${v1} - ${v2} = ${resultado}`
+        }
+   </script>
+</body>
+</html>
